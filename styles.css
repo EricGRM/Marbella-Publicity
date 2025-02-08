@@ -17,12 +17,12 @@ body {
 
 .container {
   display: flex;
-  flex-wrap: wrap; /* Allow flex items to wrap on small screens */
   width: 90%;
   max-width: 1200px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  flex-direction: row; /* Default layout for larger screens */
 }
 
 .left, .right {
@@ -160,7 +160,7 @@ form .text h3 a:hover {
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
   .container {
-    flex-direction: column;
+    flex-direction: column; /* Stack left and right parts vertically */
   }
 
   .left, .right {
@@ -173,5 +173,13 @@ form .text h3 a:hover {
 
   .carousel button {
     padding: 5px;
+  }
+
+  .left {
+    order: 1; /* Ensure the left part is at the top */
+  }
+
+  .right {
+    order: 2; /* Ensure the right part is below the left part */
   }
 }
