@@ -17,6 +17,7 @@ body {
 
 .container {
   display: flex;
+  flex-wrap: wrap; /* Allow flex items to wrap on small screens */
   width: 90%;
   max-width: 1200px;
   background: #fff;
@@ -32,7 +33,7 @@ body {
 .left {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Aligns items to the top */
+  justify-content: flex-start;
   align-items: center;
   background-color: #f4f4f4;
   position: relative;
@@ -52,11 +53,11 @@ header {
 
 .carousel img {
   width: 100%;
-  display: none; /* Hide all images initially */
+  display: none;
 }
 
 .carousel img:first-child {
-  display: block; /* Show the first image */
+  display: block;
 }
 
 .carousel button {
@@ -154,4 +155,23 @@ form .text h3 a {
 
 form .text h3 a:hover {
   text-decoration: underline;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    padding: 10px;
+  }
+
+  .wrapper {
+    padding: 20px;
+  }
+
+  .carousel button {
+    padding: 5px;
+  }
 }
