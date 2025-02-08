@@ -22,7 +22,7 @@ body {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  flex-direction: row; /* Default layout for larger screens */
+  flex-direction: column; /* Default layout for larger screens */
 }
 
 .left, .right {
